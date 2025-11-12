@@ -1,10 +1,21 @@
 @Library('sharedlib') _
 pipeline {
     agent any
+ 
     stages {
-        stage('Test Shared Library') {
+        stage('Greet') {
             steps {
                 sayHello('Bethel')
+            }
+        }
+        stage('Build') {
+            steps {
+                buildApp()
+            }
+        }
+        stage('Deploy') {
+            steps {
+                deployToK8s()
             }
         }
     }
