@@ -1,4 +1,3 @@
-#@Library('sharedlib') _
 sayHello('Bethel')
  
 pipeline {
